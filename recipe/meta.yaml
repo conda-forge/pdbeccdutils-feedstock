@@ -1,14 +1,14 @@
 {% set name = "pdbeccdutils" %}
-{% set version = "1.0.4" %}
-{% set python_min = "3.10" %}
+{% set version = "2.0.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdbeccdutils-{{ version }}.tar.gz
-  sha256: aa9d4ff0832becce7d60508a1355838e9c0aba780631b51accde6e797da57db6
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pdbeccdutils-{{ version }}.tar.gz
+  sha256: 8edfc396710b7e888e1beb20209c1de8e71714a33afa10961d0be0da23c1d682
 
 build:
   entry_points:
@@ -32,7 +32,7 @@ requirements:
     - requests >=2.32.3
     - gemmi >=0.6.6
     - networkx >=3.3.0
-    - rdkit >=2023.9.6
+    - rdkit >=2026.03.6
 
 test:
   imports:
